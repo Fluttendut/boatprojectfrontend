@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.css">
+  <title>School System</title>
+</head>
+
+<body>
+<header>
+  <h1>Boooaaattt!</h1>
+</header>
+
+<section>
+  <h2 id="boatsText">List of boats</h2>
+  <table id="boat-table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>type</th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <br>
+
+  <form id="form-create-boat">
+    <h2>Create boat</h2>
+    <label>Type</label>
+    <select id="create-boat-type">
+      <option value="More than 40ft">More than 40ft</option>
+      <option value="25ft - 40ft">25ft - 40ft</option>
+      <option value="Below 25ft">Below 25ft</option>
+    </select>
+    <button id="createButton">Create</button>
+    <dialog id="dialog-update-boat">
+      <form id="form-update-boat">
+        <h2>Update</h2>
+        <label for="update-boat-type">Type</label>
+        <!--<input type="text" name="type" id="update-boat-type" placeholder="Update boat type" required>-->
+        <select id="update-boat-type">
+          <option value="More than 40ft">More than 40ft</option>
+          <option value="25ft - 40ft">25ft - 40ft</option>
+          <option value="Below 25ft">Below 25ft</option>
+        </select>
+        <button id="updateButton">Update</button>
+      </form>
+    </dialog>
+  </form>
+</section>
+
+<script src="app.js"></script>
+</body>
+
+</html>
