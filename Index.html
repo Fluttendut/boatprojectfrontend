@@ -37,12 +37,12 @@
       <option value="25ft - 40ft">25ft - 40ft</option>
       <option value="Below 25ft">Below 25ft</option>
     </select>
+    <br>
     <button id="createButton">Create</button>
     <dialog id="dialog-update-boat">
       <form id="form-update-boat">
         <h2>Update</h2>
         <label for="update-boat-type">Type</label>
-        <!--<input type="text" name="type" id="update-boat-type" placeholder="Update boat type" required>-->
         <select id="update-boat-type">
           <option value="More than 40ft">More than 40ft</option>
           <option value="25ft - 40ft">25ft - 40ft</option>
@@ -52,6 +52,20 @@
       </form>
     </dialog>
   </form>
+
+  <h2 id="racesText">List of races</h2>
+  <table id="race-table">
+    <thead>
+    <tr>
+      <th>Race ID</th>
+      <th>Race date</th>
+      <th>Boat ID</th>
+      <th>Points</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <br>
 </section>
 
 <script src="app.js"></script>

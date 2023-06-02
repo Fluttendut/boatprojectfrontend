@@ -6,7 +6,6 @@ window.addEventListener("load", initialApp);
 async function initialApp ()  {
     await updateBoatTable();
 
-    // document.querySelector("#form-create-boat").addEventListener("submit", createBoatSubmit);
     document.querySelector("#updateButton").addEventListener("click", updateBoatModel)
     document.querySelector("#createButton").addEventListener("click", createBoatSubmit);
 }
@@ -61,26 +60,18 @@ async function GetAllBoats ()
 async function deleteBoatById (id) {
     const response = await fetch(`${endpoint}/deleteboat/${id}`, {method: "DELETE"});
 
-    //test om response gik godt
     if(response.ok){
         await updateBoatTable();
     }
 }
 
-// async function showUpdateDialog(boat){
-//     seletedId = boat.id;
-//     const form = document.querySelector("#form-update-boat");
-//     form.type.value = boat.type;
-//     document.querySelector("#dialog-update-boat").showModal();
-// }
-
 
 function showUpdateDialog(boat) {
     console.log(boat);
-    selectedId = boat.id; // store the selected teacher's id in global variable
+    selectedId = boat.id;
     const updateInputField = document.querySelector("#update-boat-type");
     updateInputField.value = boat.type;
-    document.querySelector("#dialog-update-boat").showModal(); // display the modal
+    document.querySelector("#dialog-update-boat").showModal();
 }
 
 async function updateBoatTable ()
